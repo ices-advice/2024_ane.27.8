@@ -1,0 +1,261 @@
+---
+title: "WGHANSA-II"
+subtitle: "ane.28.8 assessment, November 2024"
+author: " "
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output:
+  powerpoint_presentation:
+    reference_doc: bob_anchovy_tmpl.potx
+    # reference_doc: my-styles.pptx
+    # toc: true
+    # toc_depth: 1
+---
+
+```{r setup, echo=FALSE, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+
+library(patchwork)
+library(figpatch)
+library(officedown)
+library(officer)
+library(cowplot) # for ggdraw() & draw_image()
+library(ggpubr)
+library(ggplot2)
+library(gridExtra)
+library(flextable)
+
+```
+
+```{r load}
+# load("data/input.RData") 
+# load("report/tables_run.RData")
+# load("report/tables_stf.RData")
+# 
+# refpts <- read.csv("data/refpts.csv")
+# tab.ices.stf<-read.csv("output/stf/table_summary_ices_stf.csv")
+# 
+ ass_y<-2024
+ next_y<-ass_y +1
+ prev_y<-ass_y-1
+# 
+# TAC<-subset(ft6$body$dataset,Basis=="G3 with hr=0.4")[2]
+
+```
+
+## Input data
+
+New data since WGHANSA 2023 Nov:
+
++ PELGAS 2024
++ BIOMAN 2024
++ JUVENA 2025
+
++ weights at age
+
++ Updated catch 2023
+    - France: no length sampling –> same age structure as AZTI catches in 8abd
+
+## Input data
+
++ Preliminary catch 1st semester 2024 (total and age 1):
+ - Spanish catches preliminary (based on sales)
+ - French catches in 1st sem same age structure as Basque catches in June
+
++ Preliminary total catch 2nd semester 2024 under the assumption that:
+    - France and Spain: Nov-Dec catches are XX% of the total catch (average 2010-2023), i.e. Nov-Dec XX tonnes.
+
+
++ Preliminary total catch Jan-Oct 2024: 24884 tonnes (XX Fr,  XX Sp from which only XX landed in the Basque Country)
+
+## Catch 2024
+
+instert excel table
+
+## Input data
+
+```{r,echo=FALSE,fig.height=20,fig.width=30}
+# #knitr::include_graphics('report/input_obs_ssb.jpg')
+# fig1_path <- 'report/input_obs_ssb.jpg'
+# fig2_path <- 'report/input_obs_p1.jpg'
+# fig3_path <- 'report/input_obs_juvena.jpg'
+# fig4_path <- 'report/input_obs_G1_G2.jpg'
+# 
+# #knitr::include_graphics(c(fig1_path, fig2_path, fig3_path, fig4_path), auto_pdf = FALSE)
+# scaling <- 1
+# fig1 <- ggdraw() + draw_image(fig1_path, scale = scaling)
+# fig2 <- ggdraw() + draw_image(fig2_path, scale = scaling)
+# fig3 <- ggdraw() + draw_image(fig3_path, scale = scaling)
+# fig4 <- ggdraw() + draw_image(fig4_path, scale = scaling)
+# 
+# grid.arrange(fig1,fig2,fig3,fig4,ncol=2)
+
+```
+
+## Input data
+
+```{r,fig.height=50,fig.width=50}
+# fig1_path <- 'report/input_obs_catch.jpg'
+# fig2_path <- 'report/input_obs_catch_age1.jpg'
+# 
+# fig1 <- ggdraw() + draw_image(fig1_path)
+# fig2 <- ggdraw() + draw_image(fig2_path)
+# 
+# grid.arrange(fig2,fig1,ncol=1)
+```
+
+
+## Stock assessment
+
+- The assessment for the Bay of Biscay anchovy population is a 
+
+
+## Results
+
+```{r}
+#knitr::include_graphics('output/run/priorposterior_report.jpg')
+```
+
+## Results
+
+```{r}
+#knitr::include_graphics('report/series_r_bars.jpg')
+```
+
+## Results
+
+```{r}
+#knitr::include_graphics('report/series_ssb_bars_upto_Y.jpg')
+```
+
+## Results
+
+```{r,fig.height=20,fig.width=50}
+# fig1_path <- 'report/series_fsem1_bars.jpg'
+# fig2_path <- 'report/series_fsem2_bars.jpg'
+# 
+# fig1 <- ggdraw() + draw_image(fig1_path)
+# fig2 <- ggdraw() + draw_image(fig2_path)
+# 
+# grid.arrange(fig1,fig2,ncol=2)
+```
+
+## Results
+
+```{r}
+#knitr::include_graphics('report/series_hr_bars.jpg')
+```
+
+## Results
+
+```{r}
+#knitr::include_graphics('report/resid_all.jpg')
+```
+
+## Results
+
+inster table
+
+## Comparison with last year
+
+```{r,fig.height=20,fig.width=30}
+# fig1_path <- 'report/comparison_last_dec_r_bars.jpg'
+# fig2_path <- 'report/comparison_last_dec_ssb_bars.jpg'
+# fig3_path <- 'report/comparison_last_dec_fsem1_bars.jpg'
+# fig4_path <- 'report/comparison_last_dec_fsem2_bars.jpg'
+# 
+# scaling <- 1
+# fig1 <- ggdraw() + draw_image(fig1_path, scale = scaling)
+# fig2 <- ggdraw() + draw_image(fig2_path, scale = scaling)
+# fig3 <- ggdraw() + draw_image(fig3_path, scale = scaling)
+# fig4 <- ggdraw() + draw_image(fig4_path, scale = scaling)
+# 
+# grid.arrange(fig1,fig2,fig3,fig4,ncol=2)
+```
+
+## Retrospective
+
+```{r,fig.height=20,fig.width=30}
+# #knitr::include_graphics('report/series_hr_bars.jpg')
+# fig1_path <- 'report/retro_r.jpg'
+# fig2_path <- 'report/retro_ssb.jpg'
+# fig3_path <- 'report/retro_fsem1.jpg'
+# fig4_path <- 'report/retro_fsem2.jpg'
+# 
+# scaling <- 1
+# fig1 <- ggdraw() + draw_image(fig1_path, scale = scaling)
+# fig2 <- ggdraw() + draw_image(fig2_path, scale = scaling)
+# fig3 <- ggdraw() + draw_image(fig3_path, scale = scaling)
+# fig4 <- ggdraw() + draw_image(fig4_path, scale = scaling)
+# 
+# grid.arrange(fig1,fig2,fig3,fig4,ncol=2)
+```
+
+## Retrospective
+
+```{r,fig.height=20,fig.width=30}
+#knitr::include_graphics('report/rhos.jpg')
+```
+
+## SSB
+
+```{r}
+#knitr::include_graphics('report/ssb_lastyear.jpg')
+```
+
+##  SHORT-TERM FORECAST
+
+
+## Short-term forecast: Recruitment
+
+```{r}
+#knitr::include_graphics('report/stf_r_scenarios.jpg')
+```
+
+## Short-term forecast: Management plan
+
+```{r}
+#  knitr::include_graphics('report/HCR_G3_04.jpg')
+# paste("XX=", TAC)
+```
+According to the harvest control rule (HCR) named G3 with a harvest rate of 0.4, the TAC in 2022 should be XX tonnes
+
+## Short-term forecast: SSB
+
+```{r}
+# knitr::include_graphics('report/stf_ssb_under_MP.jpg')
+```
+
+
+```{r}
+# ft<-flextable(round(as.data.frame(cbind(SSB_p5=tab.ices.stf$SSB_0.05,SSB_median=tab.ices.stf$SSB_0.5,SSB_p95=tab.ices.stf$SSB_0.95,P=0)))[Y,])
+# 
+# ft <- set_table_properties(ft, layout = "autofit")
+# ft <- fontsize(ft, size=14, part = 'all')
+# ft
+```
+
+## Other catch options
+
+```{r,fig.height=20,fig.width=50}
+# fig1_path <- 'report/stf_contour_risk_nextyear2.jpg'
+# fig2_path <- 'report/stf_contour_ssb_nextyear2.jpg'
+# 
+# fig1 <- ggdraw() + draw_image(fig1_path)
+# fig2 <- ggdraw() + draw_image(fig2_path)
+# 
+# grid.arrange(fig1,fig2,ncol=2)
+```
+
+## Other catch options
+
+```{r}
+ # knitr::include_graphics('report/stf_totalcatch.jpg')
+```
+
+## Other catch options
+
+```{r}
+# ft6 <- set_table_properties(ft6, layout = "autofit")
+# ft6 <- fontsize(ft6, size=14, part = 'all')
+# ft6
+```
